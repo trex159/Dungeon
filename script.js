@@ -127,7 +127,7 @@ async function cmd1_Click() {
     document.getElementById("cmd2").disabled = false;
     document.getElementById("cmd3").disabled = true;
     document.getElementById("cmd4").disabled = true;
-    document.getElementById("cmd5").disabled = false;
+    document.getElementById("cmd5").disabled = true;
     document.getElementById("cmd6").disabled = false;
     document.getElementById("cmd7").disabled = false;
     freeSieg = 6;
