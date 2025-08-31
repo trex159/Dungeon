@@ -1,3 +1,3 @@
 # Dungeon
 Dungeon-Game
-Basierend auf einem meiner ersten VBA-Projekten
+basierend auf einem meiner ersten VBA-Projekten
