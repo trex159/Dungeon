@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dungeons</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Icon_Zeichenfläche 1.svg" type="image/svg">
+</head>
+<body>
+    <h1>Dungeons</h1>
+    <p id="Handtipp">Tipp: wenn du am Handy bist nutze am besten das Querformat</p>
+    <label id="Frm1_label" for="Frm1">Buttons:</label>
+    <div class="Buttons" id="Frm1">
+        <div class="buttons-left">
+            <button id="cmd1" class="button-type1">Start</button>
+            <button id="cmd2" class="button-type2" disabled>Neuer Raum</button>
+        </div>
+        <div class="buttons-middle">
+            <button id="cmd3" class="button-type1" disabled>Kampf</button>
+            <button id="cmd4" class="button-type1" disabled>Fliehen</button>
+            <button id="cmd5" class="button-type3" disabled>-- Gewinnen -- noch (6) Mal.</button>
+        </div>
+        <div class="buttons-right">
+            <button id="cmd6" class="button-type3" disabled>Spezies</button>
+            <button id="cmd7" class="button-type3" disabled>Beruf</button>
+        </div>
+    </div>
+
+    <div class="infos">
+        <div class="info-player" id="lbl1">
+            <h2>Du:</h2>
+        </div>
+        <div class="info-Monster" id="lbl2">
+            <h2>Monster:</h2>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <!-- In-Game Dialog Fenster -->
+    <div id="dialog-overlay" style="display:none;">
+        <div id="dialog-box">
+            <div id="dialog-message"></div>
+            <div id="dialog-input-area" style="display:none;">
+                <input type="text" id="dialog-input" autocomplete="off">
+                <button id="dialog-ok-btn">OK</button>
+            </div>
+            <div id="dialog-btn-area" style="display:none;">
+                <button id="dialog-close-btn">OK</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

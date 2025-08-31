@@ -1,0 +1,395 @@
+:root {
+    /* Farben */
+    --color-bg: #fbb77d;
+    --color-border: #000;
+    --color-shadow: #888;
+    --color-box-bg: #ff7b7b;
+    --color-btn-bg: #fff;
+    --color-btn-text: #000;
+    --color-btn-disabled: gray;
+
+    /* Schriftarten */
+    --font-main: "Algerian", Arial, sans-serif;
+    --font-headline: "Algerian", "Times New Roman", serif;
+
+    /* Schriftgrößen */
+    --font-size-h1: 64px;
+    --font-size-h1-md: 40px;
+    --font-size-h1-sm: 24px;
+    --font-size-label: 30px;
+    --font-size-label-md: 22px;
+    --font-size-label-sm: 13px;
+    --font-size-btn1: 26px;
+    --font-size-btn2: 22px;
+    --font-size-btn3: 20px;
+    --font-size-btn-md: 16px;
+    --font-size-btn-sm: 12px;
+    --font-size-info-title: 30px;
+    --font-size-info-title-md: 20px;
+    --font-size-info-title-sm: 13px;
+    --font-size-info: 16px;
+    --font-size-info-md: 14px;
+    --font-size-info-sm: 11px;
+
+    /* Maße */
+    --width-main: 80%;
+    --width-main-md: 98%;
+    --btn-width: 200px;
+    --btn-width-md: 100%;
+    --btn-width-sm: 100%;
+    --btn-height1: 50px;
+    --btn-height2: 125px;
+    --btn-height3: 75px;
+    --btn-min-height-md: 40px;
+    --btn-min-height-sm: 28px;
+    --box-height: 150px;
+    --box-height-md: 250px;
+    --box-height-sm: 100px;
+    --box-width: 45%;
+    --box-width-md: 100%;
+    --gap-main: 40px;
+    --gap-main-md: 2vw;
+    --gap-main-sm: 15px;
+    --gap-left: 10px;
+    --gap-middle: 5px;
+    --gap-right: 35px;
+    --gap-btn-md: 8px;
+    --gap-info-md: 10px;
+    --gap-info: 8.5%;
+    --padding-main: 10px;
+    --padding-main-md: 5px;
+    --padding-info: 10px;
+    --padding-info-md: 6px;
+    --padding-info-sm: 3px;
+    --padding-btn-md: 8px 0;
+    --padding-btn-sm: 4px 0;
+    --padding-label: 0 8px;
+    --padding-label-md: 0 4px;
+    --padding-label-sm: 0 2px;
+    --margin-h1: 10px 0 20px 0;
+    --margin-h1-md: 0;
+    --margin-h1-sm: 5px 0 10px 0;
+    --shadow-h1: 2px 2px 0px var(--color-shadow);
+    --box-shadow-btn: 3px 3px 5px gray;
+
+    --radius-normal: 5px;
+}
+
+/* ======== Grundlayout ======== */
+body {
+    background-color: var(--color-bg);
+    font-family: var(--font-main);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* ======== Überschrift ======== */
+h1 {
+    font-size: var(--font-size-h1);
+    font-weight: bold;
+    font-family: var(--font-headline);
+    text-transform: uppercase;
+    color: var(--color-btn-text);
+    text-shadow: var(--shadow-h1);
+    margin: var(--margin-h1);
+}
+
+#Handtipp {
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    color: var(--color-btn-text);
+    font-weight: bold;
+    display: none;
+}
+
+/* ======== Buttons-Bereich ======== */
+.Buttons {
+    border: 2px solid var(--color-border);
+    margin: 0 auto;
+    width: var(--width-main);
+    display: flex;
+    justify-content: center;
+    padding: var(--padding-main);
+    gap: var(--gap-main);
+    border-radius: var(--radius-normal);
+}
+
+#Frm1_label {
+    position: relative;
+    top: 14px;
+    right: 500px;
+    background-color: var(--color-bg);
+    padding: var(--padding-label);
+    font-size: var(--font-size-label);
+    font-weight: bold;
+    font-family: var(--font-headline);
+    color: var(--color-btn-text);
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+/* Container links/mittig/rechts */
+.buttons-left,
+.buttons-middle,
+.buttons-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons-left {
+    gap: var(--gap-left);
+}
+
+.buttons-middle {
+    gap: var(--gap-middle);
+}
+
+.buttons-right {
+    gap: var(--gap-right);
+}
+
+/* ======== Buttons allgemein ======== */
+button {
+    width: var(--btn-width);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-normal);
+    box-shadow: var(--box-shadow-btn);
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: var(--font-headline);
+}
+
+button:disabled {
+    color: var(--color-btn-disabled);
+    border-color: var(--color-btn-disabled);
+    cursor: default;
+}
+
+/* Typ 1: weit, niedriger */
+.button-type1 {
+    height: var(--btn-height1);
+    font-size: var(--font-size-btn1);
+    background-color: var(--color-btn-bg);
+    color: var(--color-btn-text);
+}
+
+/* Typ 2: fast quadratisch, aber etwas breiter als hoch */
+.button-type2 {
+    height: var(--btn-height2);
+    font-size: var(--font-size-btn2);
+    background-color: var(--color-btn-bg);
+}
+
+/* Typ 3: minimal höher als Typ 2 */
+.button-type3 {
+    height: var(--btn-height3);
+    font-size: var(--font-size-btn3);
+    background-color: var(--color-btn-bg);
+}
+
+/* ======== Info-Bereich ======== */
+.infos {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: var(--padding-main);
+    width: var(--width-main);
+    gap: var(--gap-info);
+}
+
+/* Spieler- und Monster-Boxen */
+.info-player,
+.info-Monster {
+    width: var(--box-width);
+    height: var(--box-height);
+    background-color: var(--color-box-bg);
+    border: none;
+    text-align: left;
+    padding: var(--padding-info);
+    border-radius: var(--radius-normal);
+}
+
+/* Titel in den Boxen, allgemeine schrift um mir js besser zu vereinbaren */
+.info-player h2,
+.info-Monster h2 {
+    font-size: var(--font-size-info-title);
+    font-weight: bold;
+    color: var(--color-btn-text);
+    margin: 0;
+    font-family: var(--font-headline);
+}
+
+
+/* In-Game Dialog Styles */
+#dialog-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#dialog-box {
+    background: var(--color-box-bg, #fff);
+    border-radius: 10px;
+    box-shadow: 0 0 20px #0008;
+    padding: 30px 24px 18px 24px;
+    min-width: 260px;
+    max-width: 90vw;
+    text-align: center;
+    font-family: var(--font-main);
+    color: var(--color-btn-text, #000);
+}
+#dialog-message {
+    font-size: 1.2em;
+    margin-bottom: 18px;
+    word-break: break-word;
+}
+#dialog-input-area {
+    margin-bottom: 10px;
+}
+#dialog-input {
+    font-size: 1em;
+    padding: 4px 8px;
+    border-radius: 5px;
+    border: 1px solid #888;
+    width: 80%;
+    margin-bottom: 8px;
+}
+#dialog-ok-btn, #dialog-close-btn {
+    font-size: 1em;
+    padding: 6px 18px;
+    border-radius: 5px;
+    border: 2px solid var(--color-border, #000);
+    background: var(--color-btn-bg, #fff);
+    color: var(--color-btn-text, #000);
+    cursor: pointer;
+    margin-top: 6px;
+}
+#dialog-ok-btn:active, #dialog-close-btn:active {
+    background: #eee;
+}
+
+
+/* ======== Responsive Anpassungen ======== */
+@media (max-width: 1100px) {
+    .Buttons, .infos {
+        width: var(--width-main-md);
+        gap: var(--gap-main-md);
+        padding: var(--padding-main-md);
+    }
+    #Frm1_label {
+        right: 0;
+        left: 10px;
+        font-size: var(--font-size-label-md);
+        top: 8px;
+        padding: var(--padding-label-md);
+    }
+    .info-player, .info-Monster {
+        height: var(--box-height-md);
+        font-size: var(--font-size-info);
+    }
+    h1 {
+        font-size: var(--font-size-h1-md);
+    }
+
+
+    #Handtipp {
+        display: block;
+    }
+}
+
+@media (max-width: 800px) {
+    .Buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--gap-main-sm);
+    }
+    .buttons-left,
+    .buttons-middle,
+    .buttons-right {
+        flex-direction: row;
+        gap: var(--gap-btn-md);
+        justify-content: center;
+    }
+    .buttons-left,
+    .buttons-middle,
+    .buttons-right {
+        margin-bottom: 0;
+    }
+    button {
+        width: var(--btn-width-md);
+        min-width: 120px;
+        font-size: var(--font-size-btn-md);
+    }
+    .button-type1, .button-type2, .button-type3 {
+        height: auto;
+        min-height: var(--btn-min-height-md);
+        font-size: var(--font-size-btn-md);
+        padding: var(--padding-btn-md);
+    }
+    #Frm1_label {
+        font-size: var(--font-size-label-md);
+        left: 0;
+        top: 2px;
+    }
+    .infos {
+        flex-direction: column;
+        gap: var(--gap-info-md);
+        width: var(--width-main-md);
+        padding: 0;
+    }
+    .info-player, .info-Monster {
+        width: var(--box-width-md);
+        height: 180px;
+        font-size: var(--font-size-info-md);
+        padding: var(--padding-info-md);
+    }
+    .info-player h2, .info-Monster h2 {
+        font-size: var(--font-size-info-title-md);
+    }
+
+    #Handtipp {
+        display: block;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        font-size: var(--font-size-btn-sm);
+    }
+    h1 {
+        font-size: var(--font-size-h1-sm);
+        margin: var(--margin-h1-sm);
+    }
+    #Frm1_label {
+        font-size: var(--font-size-label-sm);
+        padding: var(--padding-label-sm);
+        top: 0;
+    }
+    button {
+        font-size: var(--font-size-btn-sm);
+        min-width: 80px;
+        padding: var(--padding-btn-sm);
+    }
+    .button-type1, .button-type2, .button-type3 {
+        font-size: var(--font-size-btn-sm);
+        min-height: var(--btn-min-height-sm);
+        padding: var(--padding-btn-sm);
+    }
+    .info-player, .info-Monster {
+        height: var(--box-height-sm);
+        font-size: var(--font-size-info-sm);
+        padding: var(--padding-info-sm);
+    }
+    .info-player h2, .info-Monster h2 {
+        font-size: var(--font-size-info-title-sm);
+    }
+
+    #Handtipp {
+        display: block;
+    }
+}
